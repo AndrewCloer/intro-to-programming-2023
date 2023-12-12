@@ -18,7 +18,7 @@ header {
 
 #home-link:hover {
     text-decoration: underline;
-    background-color: rgb(50, 50, 50);
+    background-color: rgb(137, 198, 209);
 }
 
 #about-link {
@@ -31,7 +31,7 @@ header {
 
 #about-link:hover {
     text-decoration: underline;
-    background-color: rgb(50, 50, 50);
+    background-color: rgb(137, 198, 209);
 }
 
 #experience-link {
@@ -54,7 +54,7 @@ header {
 
 #experience-link:hover {
     text-decoration: underline;
-    background-color: rgb(50, 50, 50);
+    background-color: rgb(137, 198, 209);
 }
 
 body {
