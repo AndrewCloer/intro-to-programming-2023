@@ -52,3 +52,23 @@ document.getElementById('responses').addEventListener('click', (e) => {
         ul.removeChild(li);
     }
 });
+var githubRequest = new XMLHttpRequest();
+githubRequest.open("GET","https://api.github.com/users/AndrewCloer/repos");
+githubRequest.send();
+githubRequest.addEventListener("load", function(event) {
+    if (githubRequest.status >= 200 && githubRequest.status < 300) {
+        var repositories = JSON.parse(githubRequest.responseText);
+        console.log("List of GitHub repositories:");
+        console.log(repositories);
+        var projectSection = document.getElementById("projects");
+var projectList = projectSection.querySelector("ul");
+for (var i = 0; i < repositories.length; i++) {
+    var currentRepository = repositories[i];
+    var project = document.createElement("li");
+    project.innerText = currentRepository["name"];
+    projectList.appendChild(project);
+}
+} else {
+    console.error("Request failed with status: " + githubRequest.status);
+}
+});
