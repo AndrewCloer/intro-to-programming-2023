@@ -6,14 +6,43 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/index.css">
     </head>
-    
+    <div id="socials">
+        <img id="picOfMe" src="https://scontent-iad3-1.xx.fbcdn.net/v/t39.30808-6/395323544_7135355496516575_2236005174130468887_n.jpg?stp=cp6_dst-jpg&_nc_cat=110&ccb=1-7&_nc_sid=efb6e6&_nc_ohc=GEHuF8ecbEgAX9SXFaG&_nc_ht=scontent-iad3-1.xx&oh=00_AfCJptDwosQCffdkCnUao-pIjnGIf0w7G-Rm0m0-83awtg&oe=65B3D810">
+        <h3>Andrew Cloer's Portfolio</h3>
+        <a class="instagram" href="https://www.instagram.com/andrew_cloer/?hl=en" target="_blank">
+            <ion-icon name="logo-instagram"></ion-icon>
+        </a>
+        <a class="faceBook" href="https://www.facebook.com/andrew.cloer.9" target="_blank">
+            <ion-icon name="logo-facebook"></ion-icon>
+        </a>
+        <a class="gitHub" href="https://github.com/AndrewCloer" target="_blank">
+            <ion-icon name="logo-github"></ion-icon>
+        </a>
+    </div>
     <header>
-        <a href="index.html" id="home-link">Home</a> 
-        <a href="about.html" id="about-link">About</a>
-        <a href="experience.html" id="experience-link">Experience</a>
+        <a href="#experience" id="experience-link">Experience</a>
+        <a href="#about" id="about-link">About</a>
+        <a href="#skills" id="skills-link">Skills</a>
+        <a href="#projects" id="projects-link">Projects</a>
+        <a href="#messageBoard" id="messageBoard-link">Leave a Message</a>
     </header>
 
     <body>
+   
+        <div id="experience">
+            <h1>Experience</h1>
+            <p>I'm currently training to manage at an Olive Garden. I've been waiting tables there for five years now.</p>
+            <p>I'm also learning JavaScript, HTML and CSS at Code the Dream.</p>
+        </div>
+
+        <div id="about" class="divider">
+            <h1>About</h1>
+            <p>Hello, my name is Andrew Cloer and 
+                I am currently a student at Code the Dream. I am in the intro to JavaScript
+                Program and plan on taking the advanced course after this. 
+            </p1>
+        </div>
+        <div class="divider"></div>
         <section id="skills">
             <h2>Skills</h2>
             <ul></ul>
@@ -28,23 +57,27 @@
                 <section>
                     <h2>Leave a Message Below</h2>
                     <form action="index.html" id="messageBoard" method="post" name="leave_message"><br>
-                        <label for="userName">Your user name</label><br>
+                        <label for="userName">Name</label><br>
                         <input type="text" id="userName" name="userName" required><br>
-                        <label for="userEmail">Your email</label><br>
+                        <label for="userEmail">Email</label><br>
                         <input type="email" id="userEmail" name="userEmail" required><br>
-                        <label for="userMessage">Your message</label><br>
+                        <label for="userMessage">Message</label><br>
                         <textarea name="usersMessage" id="userMessage" required></textarea><br>
-                        <label for="SubmitButton">Submit:</label><br>
+                        <label for="SubmitButton"></label><br>
                         <button type="submit">Submit</button>
                     </form>
                     
                 </section>
+                
                 <section id="messages">
                     <h2>Messages:</h2>
                         <ul id="responses"> </ul>
                 </section>
                 <footer></footer>
              <script src="js/index.js"></script>
+        
+             <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+             <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
         </body>
 </html>
 

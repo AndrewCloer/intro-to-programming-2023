@@ -4,7 +4,7 @@ const year = today.getFullYear();
 const footer = document.querySelector('footer');
 const copyright = document.createElement('p');
 //Adding name to footer
-copyright.innerHTML = 'Andrew Cloer ' + year;
+copyright.innerHTML = '©Andrew Cloer ' + year;
 footer.appendChild(copyright);
 //Adding skills list and connecting it to html
 const skills = ['Basic JavaScript', 'Basic HTML', 'Basic CSS'];
@@ -18,6 +18,9 @@ for (let i = 0; i < skills.length; i++){
 //Adding interactivity to message forum
 const messageForm = document.forms['leave_message']
 const input = messageForm.querySelector("input");
+
+
+
 messageForm.addEventListener("submit", (e) => {
     e.preventDefault();
     const userName = event.target.elements.userName.value;
