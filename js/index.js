@@ -15,11 +15,10 @@ for (let i = 0; i < skills.length; i++){
     skill.innerText = skills[i];
     skillsList.appendChild(skill);
 }
+
 //Adding interactivity to message forum
 const messageForm = document.forms['leave_message']
 const input = messageForm.querySelector("input");
-
-
 
 messageForm.addEventListener("submit", (e) => {
     e.preventDefault();
