@@ -4,7 +4,7 @@ const year = today.getFullYear();
 const footer = document.querySelector('footer');
 const copyright = document.createElement('p');
 //Adding name to footer
-copyright.innerHTML = 'Andrew Cloer ' + year;
+copyright.innerHTML = '©Andrew Cloer ' + year;
 footer.appendChild(copyright);
 //Adding skills list and connecting it to html
 const skills = ['Basic JavaScript', 'Basic HTML', 'Basic CSS'];
@@ -15,9 +15,11 @@ for (let i = 0; i < skills.length; i++){
     skill.innerText = skills[i];
     skillsList.appendChild(skill);
 }
+
 //Adding interactivity to message forum
 const messageForm = document.forms['leave_message']
 const input = messageForm.querySelector("input");
+
 messageForm.addEventListener("submit", (e) => {
     e.preventDefault();
     const userName = event.target.elements.userName.value;
@@ -52,3 +54,22 @@ document.getElementById('responses').addEventListener('click', (e) => {
         ul.removeChild(li);
     }
 });
+
+var projectSection = document.getElementById("projects");
+var projectList = projectSection.querySelector("ul");
+fetch('https://api.github.com/users/AndrewCloer/repos')
+    .then(respone => respone.json())
+    .then(repositories =>  {
+        console.log("List of GitHub repositories:");
+        console.log(repositories);
+       
+        for (var i = 0; i < repositories.length; i++) {
+          var currentRepository = repositories[i];
+          var project = document.createElement("li");
+          project.innerText = currentRepository["name"];
+          projectList.appendChild(project);
+        }
+      })
+      .catch(error => {
+        console.error("Fetch request failed:", error.message);
+      });
